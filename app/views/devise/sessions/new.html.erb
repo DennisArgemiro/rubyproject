@@ -1,0 +1,30 @@
+<h2 style="text-align: center;">Login</h2>
+
+<div style="display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 400px; background: #f9f9f9; padding: 64px; border-radius: 8px;">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div style="margin-bottom: 15px;">
+        <%= f.label :email, "E-mail", style: "display: block; margin-bottom: 5px;" %>
+        <%= f.email_field :email, autofocus: true, style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :password, "Senha", style: "display: block; margin-bottom: 5px;" %>
+        <%= f.password_field :password, style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.check_box :remember_me, style: "margin-right: 5px;" %>
+        <%= f.label :remember_me, "Lembrar-me" %>
+      </div>
+
+      <div style="text-align: center;">
+        <%= f.submit "Entrar", style: "background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" %>
+      </div>
+    <% end %>
+
+    <div style="text-align: center; margin-top: 15px;">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

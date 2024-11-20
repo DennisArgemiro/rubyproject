@@ -1,0 +1,61 @@
+<h1 style="text-align: center; margin-bottom: 30px; font-family: Arial, sans-serif;">Publicações Recentes</h1>
+
+<div style="display: flex; justify-content: center;">
+  <div style="max-width: 600px; width: 100%;">
+    <% @posts.each do |post| %>
+      <div class="post" style="margin-bottom: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <!-- Título do Post -->
+        <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 1.5rem; text-align: center;">
+          <%= link_to post.title, post_path(post), style: "color: #2c3e50; text-decoration: none;" %>
+        </h2>
+
+        <!-- Informações do Post -->
+          <p style="color: #7f8c8d; font-size: 0.9rem; text-align: center;">Por <%= post.user.email %></p>
+          <p style="margin: 10px 0; font-size: 1rem; color: #34495e; text-align: justify;"><%= truncate(post.content, length: 150) %></p>
+
+        <!-- Botões para Editar e Excluir (somente para o dono do post) -->
+        <% if user_signed_in? && post.user == current_user %>
+          <div style="margin-top: 15px; display: flex; margin-left: 70%;">
+            <%= link_to 'Editar', edit_post_path(post), class: 'btn', style: "background: #3498db; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; margin-right: 10px; display: inline-block;" %>
+            <%= button_to 'Excluir', post_path(post), method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn', style: "background: #e74c3c; color: white; padding: 8px 15px; border: none; border-radius: 5px; display: inline-block;" %>
+          </div>
+        <% end %>
+
+        <!-- Comentários Existentes -->
+        <h3 style="font-family: Arial, sans-serif; font-size: 1.2rem; margin-top: 20px;">Comentários:</h3>
+        <% if post.comments.any? %>
+          <% post.comments.each do |comment| %>
+            <div class="comment" style="margin-top: 10px; padding: 10px; background: #ecf0f1; border-radius: 5px;">
+              <p style="font-size: 0.9rem; color: #2c3e50;"><strong><%= comment.user.email %></strong> disse:</p>
+              <p style="font-size: 1rem; color: #34495e;"><%= comment.content %></p>
+              <!-- Botão para Excluir Comentário (dono do comentário ou dono do post) -->
+              <% if user_signed_in? && (comment.user == current_user || post.user == current_user) %>
+                <div style="margin-top: 10px; text-align: right;">
+                  <%= link_to 'Excluir Comentário', delete_comment_post_comment_path(post, comment), data: { confirm: 'Tem certeza?' }, style: "background: #e74c3c; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;" %>
+                </div>
+              <% end %>
+            </div>
+            <hr style="border: 1px solid #ddd;">
+          <% end %>
+        <% else %>
+          <p style="color: #7f8c8d;">Sem comentários ainda.</p>
+        <% end %>
+
+        <!-- Formulário para Novo Comentário (somente se o usuário estiver logado) -->
+        <% if user_signed_in? %>
+          <h4 style="font-family: Arial, sans-serif; font-size: 1rem; margin-top: 20px;">Deixe seu comentário:</h4>
+          <%= form_with(model: [post, Comment.new], local: true) do |form| %>
+            <div class="field" style="margin-right: 24px; margin-bottom: 24px;">
+              <%= form.text_area :content, placeholder: 'Seu comentário...', rows: 3, style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" %>
+            </div>
+            <div class="actions" style="text-align: right;">
+              <%= form.submit 'Comentar', style: "background: #3498db; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;" %>
+            </div>
+          <% end %>
+        <% else %>
+          <p style="color: #3498db; font-size: 0.9rem;"><%= link_to 'Faça login para comentar', new_user_session_path, style: "color: #3498db; text-decoration: none;" %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

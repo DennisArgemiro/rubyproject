@@ -1,0 +1,52 @@
+<h2 style="text-align: center; margin-bottom: 30px; font-family: Arial, sans-serif; font-size: 24px;">Editar <%= resource_name.to_s.humanize %></h2>
+
+<div style="display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 500px; padding: 64px; background: #f9f9f9; border-radius: 8px;">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      
+      <!-- Mensagens de Erro -->
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <!-- Campo de Email -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= f.label :email, style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div style="font-size: 1rem; color: #e74c3c; margin-bottom: 20px;">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <!-- Campo de Senha -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= f.label :password, style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %> <i style="font-size: 0.9rem; color: #7f8c8d;"></i><br />
+        <%= f.password_field :password, autocomplete: "new-password", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+        <% if @minimum_password_length %>
+          <br />
+          <em style="font-size: 0.9rem; color: #888;"><%= @minimum_password_length %> characteres no minimo</em>
+        <% end %>
+      </div>
+
+      <!-- Campo de Confirmação de Senha -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= f.label :password_confirmation, style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+      </div>
+
+      <!-- Campo de Senha Atual -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= f.label :current_password, style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %> <i style="font-size: 0.9rem; color: #7f8c8d;"></i><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+      </div>
+
+      <!-- Botão de Enviar -->
+      <div class="actions" style="text-align: center; margin-top: 20px;">
+        <%= f.submit "Update", style: "background: #3498db; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;" %>
+      </div>
+    <% end %>
+    <div style="text-align: center; margin-top: 10px;">
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, style: "background: #e74c3c; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;" %>
+    </div>
+
+  </div>
+</div>

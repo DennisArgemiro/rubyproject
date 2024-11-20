@@ -1,0 +1,24 @@
+<h1 style="text-align: center; margin-bottom: 30px; font-family: Arial, sans-serif;">Novo Post</h1>
+
+<div style="display: flex; justify-content: center;">
+  <div style="width: 100%; max-width: 500px; padding: 20px; background: #f9f9f9; border-radius: 8px; padding: 64px;">
+    <%= form_with model: @post, local: true do |form| %>
+      <!-- Campo do Título -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= form.label :title, "Título", style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %><br>
+        <%= form.text_field :title, style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+      </div>
+
+      <!-- Campo do Conteúdo -->
+      <div class="field" style="margin-bottom: 20px;">
+        <%= form.label :content, "Conteúdo", style: "font-size: 1rem; font-family: Arial, sans-serif; color: #34495e;" %><br>
+        <%= form.text_area :content, style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;" %>
+      </div>
+
+      <!-- Botão de Publicar -->
+      <div class="actions" style="text-align: right;">
+        <%= form.submit "Publicar", class: 'btn', style: "background: #3498db; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;" %>
+      </div>
+    <% end %>
+  </div>
+</div>
