@@ -1,0 +1,24 @@
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/date-3.4.0/ext/date
+/nix/store/p19biyk23slgqhqmfl7h7cc4c1rnl3ri-ruby-3.2.2/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/date-3.4.0/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-5ekhkc sitelibdir\=./.gem.20241120-296-5ekhkc clean
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/date-3.4.0/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-5ekhkc sitelibdir\=./.gem.20241120-296-5ekhkc
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/date-3.4.0/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-5ekhkc sitelibdir\=./.gem.20241120-296-5ekhkc install
+install -c -p -m 755 date_core.so ./.gem.20241120-296-5ekhkc
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/date-3.4.0/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-5ekhkc sitelibdir\=./.gem.20241120-296-5ekhkc clean

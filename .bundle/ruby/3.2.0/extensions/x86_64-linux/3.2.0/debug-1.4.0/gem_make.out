@@ -1,0 +1,19 @@
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/debug-1.4.0/ext/debug
+/nix/store/4mm3lyj1mmqx25diw044hciai541qcic-ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-96rrpp sitelibdir\=./.gem.20240223-1728-96rrpp clean
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-96rrpp sitelibdir\=./.gem.20240223-1728-96rrpp
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-96rrpp sitelibdir\=./.gem.20240223-1728-96rrpp install
+install -c -p -m 755 debug.so ./.gem.20240223-1728-96rrpp/debug
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/debug-1.4.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-96rrpp sitelibdir\=./.gem.20240223-1728-96rrpp clean

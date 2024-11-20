@@ -1,0 +1,23 @@
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/puma-5.6.0/ext/puma_http11
+/nix/store/4mm3lyj1mmqx25diw044hciai541qcic-ruby-3.2.2/bin/ruby extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+** Puma will be compiled without SSL support
+creating Makefile
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/puma-5.6.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-ywalpy sitelibdir\=./.gem.20240223-1728-ywalpy clean
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/puma-5.6.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-ywalpy sitelibdir\=./.gem.20240223-1728-ywalpy
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/puma-5.6.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-ywalpy sitelibdir\=./.gem.20240223-1728-ywalpy install
+install -c -p -m 755 puma_http11.so ./.gem.20240223-1728-ywalpy/puma
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/puma-5.6.0/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20240223-1728-ywalpy sitelibdir\=./.gem.20240223-1728-ywalpy clean

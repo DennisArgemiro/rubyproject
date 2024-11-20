@@ -1,0 +1,24 @@
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+/nix/store/4mm3lyj1mmqx25diw044hciai541qcic-ruby-3.2.2/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240223-3866-n7uglo sitelibdir\=./.gem.20240223-3866-n7uglo clean
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240223-3866-n7uglo sitelibdir\=./.gem.20240223-3866-n7uglo
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240223-3866-n7uglo sitelibdir\=./.gem.20240223-3866-n7uglo install
+install -c -p -m 755 date_core.so ./.gem.20240223-3866-n7uglo
+
+current directory: /home/runner/Rails/.bundle/ruby/3.2.0/gems/date-3.3.4/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20240223-3866-n7uglo sitelibdir\=./.gem.20240223-3866-n7uglo clean

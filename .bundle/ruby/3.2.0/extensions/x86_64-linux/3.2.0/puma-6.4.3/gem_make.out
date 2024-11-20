@@ -1,0 +1,24 @@
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/puma-6.4.3/ext/puma_http11
+/nix/store/p19biyk23slgqhqmfl7h7cc4c1rnl3ri-ruby-3.2.2/bin/ruby extconf.rb
+checking for BIO_read() in -llibcrypto... no
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+** Puma will be compiled without SSL support
+creating Makefile
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/puma-6.4.3/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-n59yah sitelibdir\=./.gem.20241120-296-n59yah clean
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/puma-6.4.3/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-n59yah sitelibdir\=./.gem.20241120-296-n59yah
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/puma-6.4.3/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-n59yah sitelibdir\=./.gem.20241120-296-n59yah install
+install -c -p -m 755 puma_http11.so ./.gem.20241120-296-n59yah/puma
+
+current directory: /home/runner/GrandDentalString/.bundle/ruby/3.2.0/gems/puma-6.4.3/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20241120-296-n59yah sitelibdir\=./.gem.20241120-296-n59yah clean
