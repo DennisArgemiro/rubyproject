@@ -49,7 +49,7 @@ Este projeto foi desenvolvido para gerenciar **usuários**, **posts** e **coment
 ## 📌 Como Usar  
 1. Clone este repositório:  
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/DennisArgemiro/rubyproject.git
    ```
 2. Instale as dependências:  
    ```bash
